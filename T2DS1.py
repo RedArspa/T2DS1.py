@@ -43,9 +43,9 @@ def minhash(bag_one, bag_two, hashcount=100):
     return hash_one.jaccard(hash_two)
 
 
-st.write("### Word Level Shiinging Similarty")
-hashcount = st.slider('Number of hashfunctions', value=100, min_value=1, max_value=1000)
-shinglesize = st.slider('Shingle size', value=5, min_value=1, max_value=15)
+st.write("### Word Level Shingling Similarty")
+hashcount = st.slider('Number of hashfunctions', value=100, min_value=1, max_value=1337)
+shinglesize = st.slider('Shingle size', value=3, min_value=1, max_value=15)
 shinglebag = create_shinglebag(shinglesize)
 doc1 = st.selectbox("Select bag 1:", shinglebag, index=0)
 doc2 = st.selectbox("Select bag 2:", shinglebag, index=0)
